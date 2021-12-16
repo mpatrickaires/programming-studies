@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+       var listaFuncionarios = ['Viviane', 'Rosângela', 'Miguel', 'Lucas', 'Fernanda']
+       listaFuncionarios['a'] = 'Luciana'
+       listaFuncionarios[-5] = 'Mariana'
+
+       document.write(`<h3>Antigo Array</h3> ${listaFuncionarios} <hr>`)
+       // O '.forEach' passa três argumentos para a função de callback: o valor presente no índice atual, o próprio índice e por último o próprio array trabalhado no For Each
+       // Esse método atua apenas sobre índices do array que sejam inteiros positivos. Índices com tipo string ou boolean ou mesmo com um valores menor que 0 serão descosiderados pelo For Each
+       listaFuncionarios.forEach(function(valor, indice, array) {
+           document.write(`Índice: ${indice} | Valor: ${valor} <br>`)
+           document.write(`A partir do Array: ${array[indice]} <hr>`)
+
+           if (valor === 'Lucas') {
+               array[indice] = 'Um novo valor' 
+           }
+       })
+
+       document.write(`<h3>Novo Array</h3> ${listaFuncionarios} <br>`)
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script> // Outro nome: "interpolação de string"
+        let nome = 'Jorge'
+        
+        // console.log('Oi ' + nome + ', tudo bem?')
+        console.log(`Oi ${nome}, tudo bem?`)
+        
+        console.log(`Eu permito
+                    a quebra de linha`) // Essa quebra de linha é obtida usando a crase (``)
+        
+        console.log(`2 + 5 = ${2 + 5}`)
+
+        // Também permite a interpolação de funções
+        function multiplicar(x, y) {
+            return x * y
+        }
+
+        console.log(`8 * 5 = ${multiplicar(8, 5)}`)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // Todos são filhos de 'Object.prototype'
+        let animal = {
+            atributo1: 'a'
+        }
+        let vertebrado = {
+            __proto__: animal, // Dessa forma, é possível alterar o protótipo do objeto, fazendo com que ele tenha acesso aos atributos/métodos do objeto definido em seu protótipo (basicamente uma herança)
+            atributo2: 'b'
+        }
+        let ave = {
+            __proto__: vertebrado,
+            atributo3: 'c'
+        }
+
+        console.log(ave);
+        console.log(ave.atributo3, ave.atributo2, ave.atributo1);
+
+        // É possível definir novos atributos ou méotodos para o 'Object.prototype'. Dessa forma, todos os objetos da aplicação irão automaticamente herdar essas novas características
+        Object.prototype.atributo50 = 'Z';
+        console.log(ave.atributo50, vertebrado.atributo50, animal.atributo50); // Observe que 'ave', 'vertebrado' e 'animal' não possuem um 'atributo50': isso foi herdado diretamante do 'Object.prototype'
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let frutas = ['Abacaxi', 'Uva', 'Pera', 'Mamão'];
+        let [a, b = 'Abacate', , c, d = 'Banana'] = frutas; 
+        // Com o uso do 'destructuring', é pego, de acordo com a ordem, o valor contido na posição respectiva do array e atribuído para uma variável declarada ali no momento (ex.: 'a' é o valor em 'frutas[0]', 'b' em 'frutas[1]', e assim por diante), funcionando basicamente como um syntax sugar para atribuir os valores do array para variáveis em uma única linha.
+        // Caso queira pular um valor do array, basta deixar em branco o local em que estaria a variável, assim como está após 'b' e antes de 'c' ('b, , c').
+        // É possível também definir um valor padrão para a variável caso a posição que ela representa não exista no array (ex.: 'd = 'Banana''). O valor default é desconsiderado para variáveis onde a posição do array tenha um valor (ex.: 'b = 'Abacate'').
+
+        console.log(a, b, c, d); 
+
+
+        // Esse operador também funciona com arrays multimensionais (matriz)
+        let coisas = [['Abacaxi', 'Uva', 'Pera', 'Mamão'], ['José', 'Maria']];
+        let [, [, nomeMaria]] = coisas;
+        // Nesse caso, o objetivo foi recuperar o valor 'Maria' para a variável 'nomeMaria'. Para fazer isso, primeiro pulamos o primeiro índice do array multidimensional (que retornaria o primeiro array); após isso, utilizamos a sintaxe de array ([]) para indicar que será acessado os valores do array contido dentro do array multimensional em que estamos trabalhando originalmente (sem esse indicatório, nos seria retornado o array completo do segundo índice caso passassemos a variável diretamente). Como não queremos o valor 'José', na primeira posição, podemos pular ele e atribuir uma variável apenas para a segunda posição ('Maria') desse array aninhado.
+        console.log(nomeMaria);
+
+
+        /* DESAFIO: Tentando extrair o valor 'Pera' */
+        let [[, , variavelPera]] = coisas;
+        console.log(variavelPera);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

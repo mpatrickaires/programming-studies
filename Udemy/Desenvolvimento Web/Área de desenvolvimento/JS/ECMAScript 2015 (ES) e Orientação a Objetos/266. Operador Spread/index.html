@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /* String */
+        let tituloArtigo = 'Como utilizar o operador Rest/Spread';
+
+        console.log(tituloArtigo);
+        console.log(...tituloArtigo); // Isso irá retornar (espalhar/spread) cada um dos caracteres da string individualmente
+        console.log([...tituloArtigo]); // Podendo-se, assim, utilizar esse operador para alimentar um array
+
+        /* Arrays */
+        let listaCursos1 = ['NodeJS e MongoDB', 'ES6, TypeScript e Angular 4'];
+        let listaCursos2 = ['Multiplataforma Android/IOS', 'Introdução ao GNU/Linux'];
+        let listaCursosCompleto = [...listaCursos1, 'Web Completo', ...listaCursos2, 'Android Completo']; // Utilizando o Spread com arryas, é possível recuperar todos os elementos contidos dentro deles e, por exemplo, repassar para um outro array sem a necessidade de um laço de repetição. Ao repassar para um novo array, o Spread automaticamente faz a indexação dos elementos corretamente
+
+        console.log(listaCursosCompleto);
+
+        /* Objeto */
+        let pessoa = {
+            nome: 'João',
+            idade: 27
+        }
+        let clone = {
+            endereco: 'Rua Abc',
+            ...pessoa // O uso do Spread no contexto de objeto faz com que os atributos (a chave e o valor) sejam repassados para o objeto em que o spread está sendo realizado. Dessa forma, aqui o objeto 'clone' possuirá o 'nome: 'João'' e o 'idade: 27' também dentro do seu contexto, incluindo qualquer outro atributo que venha a ser declarado em 'pessoa'
+        }
+
+        console.log(clone);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

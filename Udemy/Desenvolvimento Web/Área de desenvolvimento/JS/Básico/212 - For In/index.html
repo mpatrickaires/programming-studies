@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+       //var listaConvidado = ['Jorge', 'Jamilton', 'Jose', 'Ana', 'Maria']
+
+       var listaConvidado = []
+       listaConvidado['a'] = 'Jorge'
+       listaConvidado[10] = 'Jorge'
+       listaConvidado['zebra'] = 'Jorge'
+       listaConvidado[-1] = 'Jorge'
+       listaConvidado[true] = 'Jorge'
+
+       // O 'For In' retorna o valor do índice a cada iteração do laço (ele não retorna o valor presente neste índice no array)
+       // Ele é útil para quando os índices não são números sequenciais. Ou seja, quando é definido posições aleatórias ou mesmo índices personalizados (string/boolean)
+       for (var indice in listaConvidado) {
+           console.log(`Índice ${indice}: ${listaConvidado[indice]}`)
+       }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

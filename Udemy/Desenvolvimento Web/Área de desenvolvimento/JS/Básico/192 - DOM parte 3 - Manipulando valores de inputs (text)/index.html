@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function InserirCaractere() {
+            var campoInput = document.getElementById('caractere')
+            var caractere = campoInput.value.charAt(campoInput.value.length - 1)
+            
+            if (!isNaN(caractere) && caractere != ' ') {
+                document.getElementById('numero').value += caractere
+            }
+            else {                
+                document.getElementById('letra').value += caractere
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="text" name="caractere" id="caractere" placeholder="Digite um caractere aqui" onkeyup="InserirCaractere()">
+
+    <hr>
+    
+    <label for="letra">Letras:</label>
+    <input type="text" name="letra" id="letra" disabled>
+
+    <label for="numero">Números:</label>
+    <input type="text" name="numero" id="numero" disabled>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+       var listaFruta = []
+       listaFruta[0] = 'Banana'
+       listaFruta[1] = 'Maçã'
+
+       /*
+            INCLUSÃO
+       */
+       // Incluir elemento no final do array
+       listaFruta.push('Uva')
+       
+       // Incluir elemento no início do array (também reordena os indíces para manter a lógica sequencial)
+       listaFruta.unshift('Laranja')
+
+       console.log(listaFruta)
+
+       /*
+            EXCLUSÃO
+       */
+       // Exclui o último elemento do array
+       listaFruta.pop()
+
+       // Exclui o primeiro elemento do array
+       listaFruta.shift()
+
+       console.log(listaFruta)
+    </script>
+</head>
+<body>
+
+</body>
+</html>

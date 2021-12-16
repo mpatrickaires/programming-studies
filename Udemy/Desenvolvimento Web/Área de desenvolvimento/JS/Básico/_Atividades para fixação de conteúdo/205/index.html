@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="campo" id="campo">
+    <input type="button" value="Adicionar" name="adicionar" id="adicionar">
+    <input type="button" value="Ordenar" name="ordenar" id="ordenar">
+    
+    <script>
+        var objetos = ['Cadeira', 'Impressora', 'Garfo']
+
+        document.getElementById('adicionar').addEventListener('click', () => {
+             var campo = document.getElementById('campo')
+
+             campo.value = campo.value.trim()
+
+             if (campo.value === '') return alert('Informe um valor válido!')
+             
+             if (objetos.indexOf(campo.value) >= 0) {
+                alert('Objeto já foi adicionado.')
+             } else {
+                objetos.push(campo.value)
+                console.log(objetos)
+                campo.value = ''
+             }
+        })
+
+        document.getElementById('ordenar').addEventListener('click', () => {
+            objetos.sort()
+            console.log(objetos)
+        })
+
+        document.getElementById('campo').onkeydown = ev => {
+            if (ev.key === 'Enter') document.getElementById('adicionar').click()
+        }
+    </script>
+</body>
+</html>

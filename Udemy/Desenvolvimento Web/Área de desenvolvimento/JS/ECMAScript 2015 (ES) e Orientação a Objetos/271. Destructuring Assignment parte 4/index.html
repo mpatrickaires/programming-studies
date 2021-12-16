@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // Array
+        let arr = [10, 20, 30, 40];
+
+        let [a, ...resto] = arr; // Nesse caso, os demais valores do array serão retornados para a variável 'resto' como um array devido ao uso do 'Spread' (...)
+
+        console.log(a, resto);
+
+        // Objeto
+        let obj = {
+            a: 10,
+            b: 20,
+            c: 30,
+            d: 40,
+        }
+
+        let {a: x, ...resto2} = obj; // No caso do objeto, será retornado um Object com os atributos restantes para a variável 'resto2'
+        console.log(x, resto2);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

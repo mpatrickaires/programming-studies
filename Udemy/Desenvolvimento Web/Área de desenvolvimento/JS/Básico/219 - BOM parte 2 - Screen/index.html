@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        // Altura e largura da tela EXCLUINDO a barra de ferramentas do windows
+        // OBS: Caso nas configurações do windows a barra de ferramentas esteja oculta, será retornado o tamanho padrão da tela (da mesma maneira que no 'screen.height' ou 'screen.width')
+        var altura = window.screen.availHeight
+        var largura = window.screen.availWidth
+
+        document.write('<h4>Excluindo a barra de ferramentas</h4>')
+        document.write('Altura do navegador é: ' + altura + ' px <br>')
+        document.write('Largura do navegador é: ' + largura + ' px <br>')
+
+        document.write('<hr>')
+        
+        // Altura e largura da tela INCLUINDO a barra de ferramentas do windows
+        altura = window.screen.height
+        largura = window.screen.width
+
+        document.write('<h4>Incluindo a barra de ferramentas</h4>')
+        document.write('Altura do navegador é: ' + altura + ' px <br>')
+        document.write('Largura do navegador é: ' + largura + ' px <br>')
+
+        document.write('<hr>')
+
+        if (largura < 500) {
+            document.write('Lógica para impressão navegação mobile')
+        } else {
+            document.write('Lógica para impressão navegação web')
+        }
+
+    </script>
+</head>
+<body>
+</body>
+</html>

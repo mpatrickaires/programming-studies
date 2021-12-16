@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        class Animal {
+            constructor(cor, tamanho) {
+                this.cor = cor
+                this.tamanho = tamanho
+            }
+
+            dormir() {
+                console.log('Dormir')
+            }
+        }
+
+        class Passaro extends Animal {
+            constructor(cor, tamanho, bico) {
+                super(cor, tamanho)
+                this.bico = bico
+            }
+
+            voar() {
+                console.log('Voar')
+            }
+        }
+
+        class Papagaio extends Passaro { // Também receberá os atributos e métodos de Animal, pois Passaro herda dele 
+            constructor(cor, tamanho, bico, sabeFalar) {
+                super(cor, tamanho, bico)  
+                this.sabeFalar = sabeFalar
+            }
+
+            falar() {
+                console.log('Falar')
+            }
+        }
+
+        class Avestruz extends Passaro {
+            constructor(cor, tamanho, bico) {
+                super(cor, tamanho, bico)
+            }
+
+            enterrarCabeca() {
+                console.log('Enterrar a cabeça')
+            }
+
+            voar() {
+                console.log('Não sabe voar'); 
+            }
+        }
+
+        let papagaio = new Papagaio('Verde', 15, 'Médio', true)
+        console.log(papagaio)
+        papagaio.voar()
+
+        let avestruz = new Avestruz('Branco', 250, 'Grande')
+        console.log(avestruz);
+        avestruz.enterrarCabeca()
+        avestruz.voar()
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

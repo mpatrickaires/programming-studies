@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let nome = 'Matheus'
+        let idade = 19
+        let sexo = 'Masculino'
+        let profissao = 'Programador'
+
+        let objeto = {
+            nome: nome,
+            idade: idade,
+            sexo: sexo,
+            profissao: profissao,
+            exibirResumo: function() {
+                console.log(`${this.nome}, ${this.idade} anos, sexo ${this.sexo}, trabalha como ${this.profissao}`)
+            }
+        }
+        objeto.exibirResumo()
+
+
+        let objeto2 = {
+            /* 
+                Quando a chave possui a mesma nomenclatura que o nome da variável, pode-se omitir a declaração da chave (nome/chave = nome da variável ; valor = valor da variável)
+            */
+            nome, // nome: nome
+            idade, // idade: idade
+            sexo, // sexo: sexo 
+            profissao, // profissao: profissao
+            exibirResumo() { // exibirResumo: function() (na declaração de chave que recebe como valor uma função, basta declarar o nome da chave seguido de parênteses)
+                console.log(`${this.nome}, ${this.idade} anos, sexo ${this.sexo}, trabalha como ${this.profissao}`)
+            }
+        }
+        objeto2.exibirResumo()
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

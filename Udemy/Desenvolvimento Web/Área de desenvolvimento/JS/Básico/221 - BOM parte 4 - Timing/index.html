@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        var tempo = 1
+        var timeout = setTimeout(() => document.write('Timeout: Passou ' + tempo + ' segundo(s) <hr>'), 1000)
+        // clearTimeout(timeout);
+
+        var intervalo = setInterval(() => {
+            document.write('Interval: Passou ' + tempo + ' segundo(s) <br>')
+            tempo++
+
+            if (tempo === 5) {
+                // window.location.reload()
+                clearInterval(intervalo)
+            }
+        }, 1000);
+        clearInterval();
+    </script>
+</head>
+<body>
+</body>
+</html>

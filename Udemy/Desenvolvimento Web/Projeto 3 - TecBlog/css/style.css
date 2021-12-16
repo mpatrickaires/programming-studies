@@ -1,0 +1,131 @@
+/* Limpar formatações padrões */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Layout */
+body {
+    font-size: 1em;
+    background-color: #e6e6e6;
+    font-family: 'Trebuchet MS', 'Helvetica', sans-serif;
+}
+
+a:link, a:visited {
+    color: #f7b600;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#header {
+    background-color: #f7b600;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    padding: 15px;
+}
+
+#header-logo, #navbar {
+    padding: 10px;
+}
+
+#header-logo h1 {
+    font-size: 2.5em;
+}
+
+#header-title-1 {
+    color: #4e4e4e;
+}
+
+#navbar {
+    font-size: 1.2em;
+}
+
+.navbar-link:link, .navbar-link:visited {
+    padding: 10px 10px;
+    color: #fff;
+}
+
+.navbar-link:hover {
+    color: #f7b600;
+    background-color: #fff;
+    text-decoration: none;
+}
+
+#main {
+    width: 920px;
+    margin: 20px auto;
+}
+
+#main-post {
+    width: 660px;
+    float: left;
+}
+
+#main-sidebar {
+    width: 240px;
+    float: right;
+}
+
+.post {
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #fff;
+}
+
+.post-title {
+    color: #f7b600; 
+}
+
+.post-info {
+    margin-bottom: 10px;
+    font-size: 0.95em;
+}
+
+.post-image {
+    width: 620px;
+}
+
+.post-content {
+    text-align: justify;
+}
+
+.sidebar {
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 20px;
+    font-size: 0.9em;
+}
+
+.sidebar-title {
+    color: #565656;
+    background-color: #ccc;
+    padding: 5px;
+}
+
+.sidebar-recent {
+    padding: 5px;
+}
+
+.sidebar-category {
+    font-size: 1.1em;
+}
+
+.sidebar-category ul {
+    list-style: none;
+}
+
+#footer {
+    clear: both;
+    padding: 15px;
+    margin-bottom: 10px;
+    text-align: center;
+    background-color: #ccc;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}

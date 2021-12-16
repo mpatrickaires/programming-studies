@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+       /* 
+        * 1) Baseado no exemplo da aula "Praticando um pouco - Percorrendo e listando itens de 
+        * Arrays", implemente a mesma solução, porém utilizando o comando for. 
+        */
+
+       var listaFrutas = ['Banana', 'Maçã', 'Morango', 'Uva']
+
+       document.write('<h5>1) Baseado no exemplo da aula "Praticando um pouco - Percorrendo e listando itens de Arrays", implemente a mesma solução, porém utilizando o comando for</h5>')
+       for (var z = 0; z < listaFrutas.length; z++) {
+           document.write(listaFrutas[z] + '<br>')
+       }
+       document.write('<hr>')
+       
+
+       /*
+        * 2) Baseado no exemplo da aula "Praticando um pouco - Criando uma tabuada de 1 a 10 
+        * (laços encadeados)", implemente a mesma solução, porém utilizando o comando while.
+        */
+
+       document.write('<h5>2) Baseado no exemplo da aula "Praticando um pouco - Criando uma tabuada de 1 a 10 (laços encadeados)", implemente a mesma solução, porém utilizando o comando while.</h5>')
+       function tabuada(limite = 10) {
+           let tabuada = 1
+           while (tabuada <= limite) {
+               document.write(`<h4>Tabuada de ${tabuada}</h4>`)
+               
+               let valor = 1
+               while (valor <= 10) {
+                   document.write(`${valor} x ${tabuada} = ${(valor * tabuada)} <br>`)
+                   valor++
+               }
+
+               tabuada++
+           }
+       }
+
+       tabuada()
+    </script>
+</head>
+<body>
+
+</body>
+</html>

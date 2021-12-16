@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script> // Sobre a declaração 'var'
+        /*
+            Utilizando a declaração a partir do 'var', a variável sofrerá um 'hoisting' (elevação) para um escopo acima do seu quando ela for declarada dentro de um bloco. 
+            Portanto, se declarada em um bloco que está no escopo global, essa variável também se tornará global; se declarada em um bloco dentro de uma função, ela será acessível dentro de toda a função (porém não se tornará global). 
+            Exemplo:
+        */
+       if (true) {
+           var variavelBlocoVar = 'Eu sou uma variável de bloco'
+       }
+
+       console.log(variavelBlocoVar) // O valor da variável será demonstrado normalmente
+
+       function funcaoVar() {
+           if (true) {
+               var variavelBlocoFuncaoVar = 'Eu sou uma variável de bloco da função'
+           }
+
+           console.log(variavelBlocoFuncaoVar) // O valor da variável será demonstrado normalmente
+       }
+
+       funcaoVar()
+
+       // console.log(variavelBlocoFuncaoVar) - Essa linha de código gerará uma exception
+
+
+       /*
+           Outra particularidade do 'var' é a de que ele permite que uma variável seja acessada e tenha atribuição de valores antes mesmo dela ser declarada (novamente devido ao hoisting)
+       */
+       variavelNaoDeclaradaVar = 'Eu sou uma variável que ainda não está declarada'
+       console.log(variavelNaoDeclaradaVar)
+       var variavelNaoDeclaradaVar
+
+
+       /*
+            O 'var' também permite que uma variável seja redeclarada
+       */
+       var variavelRedeclaradaVar = 'Eu sou uma variável que não foi redeclarada'
+       var variavelRedeclaradaVar = 'Eu sou uma variável que foi redeclarada'
+       console.log(variavelRedeclaradaVar)
+    </script>
+
+    <script> // Sobre a declaração 'let' (implementado no JavaScript a partir do ES6 em 2015)
+        /*
+            Utilizando a declaração a partir do 'let', a variável será pertencente apenas para o bloco onde foi declarada. 
+            Desse modo, mesmo que declarada em um escopo de bloco, a conceituação de 'hoisting' não é aplicada, sendo assim essa variável inacessível para o escopo superior em que ela está contida (de função ou global)
+        */
+       if (true) {
+           let variavelBlocoLet = 'Eu sou uma variável de bloco'
+       }
+
+      // console.log(variavelBlocoLet) - Essa linha de código gerará uma exception
+
+       function funcaoLet() {
+           if (true) {
+               let variavelBlocoFuncaoLet = 'Eu sou uma variável de bloco da função'
+           }
+
+           // console.log(variavelBlocoFuncaoLet) - Essa linha de código gerará uma exception
+       }
+
+       funcaoLet()
+
+
+      /*
+            O 'let' também não permite que uma variável seja acessada ou tenha atribuição de valores antes dela ser declarada. Portanto, para utilizar a variável é obrigatório que ela já tenha sido declarada antes no código
+      */
+
+      // variavelNaoDeclaradaLet = 'Eu sou uma variável que ainda não está declarada' - Essa linha de código gerará uma exception
+      // console.log(variavelNaoDeclaradaLet) - Essa linha de código gerará uma exception
+      let variavelNaoDeclaradaLet
+
+
+      /*
+            O 'let' não permite que uma variável seja redeclarada
+      */
+      let variaveRedeclaradaLet = 'Eu sou uma variável que não foi redeclarada'
+      // let variaveRedeclaradaLet = 'Eu sou uma variável que foi redeclarada' - Essa linha de código gerará uma exception
+      console.log(variaveRedeclaradaLet)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

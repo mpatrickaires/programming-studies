@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function alterarCor(id) {
+            document.getElementById('divCor').style.backgroundColor = id;
+        }
+    </script>
+</head>
+<body>
+    <h3>Manipulando estilo</h3>
+    
+    <input type="button" value="Vermelho" id="red" onclick="alterarCor(this.id)">
+    <input type="button" value="Verde" id="green" onclick="alterarCor(this.id)">
+    <input type="button" value="Azul" id="blue" onclick="alterarCor(this.id)">
+
+    <hr>
+
+    <div id="divCor" style="width: 300px; height: 200px; border: 1px solid black;"></div>
+</body>
+</html>

@@ -1,0 +1,108 @@
+/* Geral */
+body {
+    font-family: Helvetica, 'Trebuchet MS', sans-serif;
+    background: #fff9df url('../img/bg.png');
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+#container {
+    width: 100%;
+    min-width: 550px;
+    margin: 0 auto;
+}
+
+/* Cabeçalho */
+#header {
+    background: url('../img/topo-imagem-principal.png') no-repeat;
+    background-size: 600px;
+}
+
+#logo {
+    float: left;
+    width: 110px;
+    margin-top: 10px;
+    margin-right: auto;
+    margin-left: 10px;
+}
+
+#header-right {
+    width: 330px;
+    margin: -1px 0 -1px auto;
+    padding: 10px;
+    text-align: right;
+    background: url('../img/topo-imagem-lateral.png') no-repeat;
+    background-size: 480px;
+    font-size: 0.7em;
+}
+
+#reservation {
+    display: inline-block;
+    padding: 3px;
+    border-top: 1px solid #bfb565;
+    border-bottom: 1px solid #bfb565;
+    font-size: 0.8em;
+}
+
+
+#reservation p {
+    display: inline-block;
+    margin: 0;
+    margin-right: 35px;
+    color: #9c8e54;
+}
+
+#reservation a {
+    display: inline-block;
+    padding: 3px 6px;
+    color: wheat;
+    background-color: #a29750;
+    font-size: 1em;
+    text-transform: uppercase;
+    transition: background 0.4s linear, color 0.2s ease-out;
+}
+
+#reservation a:hover {
+    color: rgb(75, 65, 65);
+    background-color: #d1bf5b;
+}
+
+#navbar {
+    text-align: left;
+}
+
+#navbar ul {
+    margin-left: 10px;
+    font-size: 0.9em;
+    text-transform: uppercase;
+}
+
+#navbar li {
+    padding: 5px;
+}
+
+#navbar li a {
+    display: inline-block;
+    padding: 3px;
+    color: #797140;
+    transition: 0.5s ease-out;
+}
+
+#navbar li a:hover {
+    font-size: 1em;
+    letter-spacing: 0.9px;
+    color: #c76829;
+    background-color: #fff8c1;
+}
+
+#header-right img {
+    margin-top: 10px;
+    width: 180px;
+    float: right;
+}

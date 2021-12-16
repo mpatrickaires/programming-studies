@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // O operador Rest é mais utilizado no contexto de funções
+        function soma(...param) { // Isso irá trazer os parâmetros passados em forma de um array, que conterá todos eles. Usando como exemplo a chama da função mais abaixo, o '...params' será equivalente a um array '[3, 8, 5, 7]'
+            let resultado = 0;
+
+            param.forEach(element => resultado += element);
+
+            return resultado;
+        }
+
+        console.log(soma(3, 8, 5, 7));
+
+        function multiplicacao(multiplicador, ...param) { // Utilizando o operador Rest neste contexto, é possível definir parâmetros padrões que se espera receber (ex.: 'multiplicador') e então, por último, um número indefinido de parâmetros que poderão ser passados (e.x: '...param'), realizando no código o tratamento que se deseja com eles
+            let resultado = 0;
+
+            param.forEach(element => resultado += multiplicador * element);
+
+            return resultado;
+        }
+
+        console.log(multiplicacao(5, 7, 12, 3, 49));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

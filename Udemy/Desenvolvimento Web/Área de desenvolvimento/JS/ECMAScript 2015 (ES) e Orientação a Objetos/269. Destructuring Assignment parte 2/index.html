@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let produto = {
+            descricao: 'Notebook',
+            preco: 1800,
+            detalhes: {
+                fabricante: 'abc',
+                modelo: 'xyz'
+            }
+        }
+
+        let {descricao, preco: p = 1000, desconto = 5} = produto;
+        // Fazendo o destructuring de um objeto, declara-se uma variável com o mesmo nome do atributo que se deseja extrair (ex.: 'descricao') ou então o nome do atributo seguido de dois pontos e o nome da variável que irá receber o valor desse atributo (ex.: 'preco: p').
+        // Ao tentar acessar um atributo que não existe no objeto (ex.: 'desconto'), o valor retornado será 'undefined'. Para evitar isso, é possível atribuir um valor padrão para a variável caso o valor não exista (ex.: 'desconto = 5'), o mesmo comportamento que é possível obter dos arrays, sendo que caso o valor retornado exista o default será ignorado.
+
+        console.log(descricao, p, desconto); 
+
+
+        /* Extraindo valores de atributos dentro de um objeto do objeto */
+        let {detalhes: {fabricante = 'Não informado', modelo: m} } = produto;
+        // Para fazer isso, é necessário primeiro referenciar o atributo do objeto que representa um objeto interno (nesse caso, 'detalhes') e então colocar dois pontos (:) e abrir e fechar chaves ({}) novamente. Dentro das chaves que foram abertas, faz-se então o processo de extração dos atributos desse objeto interno ('fabricante' e 'modelo').
+        console.log(fabricante, m);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let assinatura = {
+            idCliente: 1000,
+            descricao: 'Acesso a internet',
+            status() {
+                console.log('Ativo')
+            }
+        }
+
+        console.log(assinatura.descricao)
+
+        // O mesmo objeto literal aqui é referenciado por duas variáveis ('assinatura' e 'y'). Ou seja, ao se atribuir uma variável que possui um objeto literal para outra variável, não há a criação de um novo objeto para essa variável, mas sim uma cópia da referência do objeto literal. Sendo assim, alterações realizadas através de qualquer uma das variáveis irá impactar no mesmo objeto
+        let y = assinatura
+
+        y.descricao = 'Internet + TV + Telefone' // Essa alteração também impactará o atributo em 'assinatura.descricao'
+
+        console.log(y.descricao)
+        console.log(assinatura.descricao)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
